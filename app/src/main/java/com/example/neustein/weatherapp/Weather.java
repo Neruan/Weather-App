@@ -2,9 +2,11 @@ package com.example.neustein.weatherapp;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -60,6 +62,9 @@ public class Weather extends AppCompatActivity {
                 TextView textsView = new TextView(this);
                 TextView lowView = new TextView(this);
                 TextView highView = new TextView(this);
+                View view = new View(this);
+                view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));
+                view.setBackgroundColor(Color.parseColor("#FFFFFF"));
                 String lowTemp = "low: " + forecast.getJSONObject(i).getString("low");
                 String highTemp = "high: " + forecast.getJSONObject(i).getString("high");
                 String date = forecast.getJSONObject(i).getString("date");
@@ -77,6 +82,7 @@ public class Weather extends AppCompatActivity {
                 dayView.setGravity(Gravity.CENTER);
                 textsView.setGravity(Gravity.CENTER);
                 horLayout.setGravity(Gravity.CENTER);
+
                 lowView.setPadding(0,0,100,0);
                 highView.setPadding(100,0,0,0);
                 horLayout.setPadding(0,0,0,50);
@@ -89,6 +95,7 @@ public class Weather extends AppCompatActivity {
                 horLayout.addView(lowView);
                 horLayout.addView(highView);
                 layout.addView(horLayout);
+                layout.addView(view);
             }
 
             tempView.setText(curTemp);
