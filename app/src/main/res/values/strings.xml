@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="locationText">Enter location</string>
+    <string name="textView">Hello World!</string>
+    <string name="search_Button">Search</string>
+    <string name="Info">Please enter a City or Zip Code.</string>
+    <string name="cityText">City</string>
+    <string name="text">text</string>
+    <string name="humid">humidity</string>
+    <string name="pressureText">pressure</string>
+    <string name="windText">wind</string>
+    <string name="curTempText">Temp</string>
+    <string name="time_Text">time</string>
+    <string name="date_text">date</string>
+</resources>
